@@ -41,4 +41,6 @@ class SolaceSprite extends FlxSprite
 
 	override function makeGraphic(width:Int, height:Int, color:FlxColor = FlxColor.WHITE, unique:Bool = false,
 			?key:String):SolaceSprite return cast super.makeGraphic(width, height, color, unique, key);
+
+	public function loadGraphicFromSolaceSprite(Sprite:SolaceSprite):SolaceSprite return cast loadGraphicFromSprite(cast Sprite);
 }
