@@ -1,5 +1,6 @@
 package solace;
 
+import solace.game.PlayState;
 import solace.save.SaveFlags;
 import openfl.events.Event;
 import flixel.FlxGame;
