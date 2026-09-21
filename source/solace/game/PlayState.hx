@@ -5,7 +5,7 @@ import flixel.math.FlxPoint;
 import flixel.FlxG;
 import flixel.FlxStrip;
 import solace.flixel.SolaceGridBackdrop;
-import solace.save.SaveFlags;
+import solace.save.Save;
 import flixel.text.FlxText;
 import solace.flixel.SolaceSprite;
 import flixel.FlxSprite;
@@ -49,13 +49,13 @@ class PlayState extends FlxState
 
 	function onPickClick()
 	{
-		SaveFlags.MONEY.value += (block == 'dirt') ? 1 / 10 : 2 / 10;
+		Save.data.MONEY += (block == 'dirt') ? 1 / 10 : 2 / 10;
 		onToolClick();
 	}
 
 	function onShovelClick()
 	{
-		SaveFlags.MONEY.value += (block == 'dirt') ? 2 / 10 : 1 / 10;
+		Save.data.MONEY += (block == 'dirt') ? 2 / 10 : 1 / 10;
 		onToolClick();
 	}
 
@@ -69,7 +69,7 @@ class PlayState extends FlxState
 	{
 		super.update(elapsed);
 
-		cashmonee.text = 'Money: ${SaveFlags.MONEY.value}';
+		cashmonee.text = 'Money: ${Save.data.MONEY}';
 		cashmonee.screenCenter(X);
 	}
 }

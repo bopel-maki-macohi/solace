@@ -1,7 +1,7 @@
 package solace;
 
 import solace.game.PlayState;
-import solace.save.SaveFlags;
+import solace.save.Save;
 import openfl.events.Event;
 import flixel.FlxGame;
 
@@ -14,7 +14,7 @@ class Main extends FlxGame
 
 	override function create(_:Event)
 	{
-		SaveFlags.init();
+		Save.init();
 
 		super.create(_);
 	}
