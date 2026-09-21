@@ -1,4 +1,4 @@
-package solace;
+package solace.game;
 
 import solace.save.SaveFlags;
 import flixel.text.FlxText;
