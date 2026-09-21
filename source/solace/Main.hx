@@ -14,7 +14,6 @@ class Main extends FlxGame
 	override function create(_:Event)
 	{
 		SaveFlags.init();
-		SaveFlags.save();
 
 		super.create(_);
 	}

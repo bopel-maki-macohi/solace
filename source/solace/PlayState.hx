@@ -1,17 +1,26 @@
 package solace;
 
-import solace.sprites.Block;
+import flixel.FlxSprite;
 import flixel.FlxState;
 
 class PlayState extends FlxState
 {
-	var width = 16;
-	var height = 16;
+	var watcher:FlxSprite;
+	var watcherPatience:Int = 10000;
 
 	override function create()
 	{
 		super.create();
 
-		for (y in 0...height) for (x in 0...width) add(new Block('dirt', x * 16, y * 16));
+		watcher = new FlxSprite('assets/watcher/happy.png');
+		add(watcher);
+		watcher.screenCenter();
+		watcher.x = watcher.width / -2;
+	}
+
+	override function update(elapsed:Float) {
+		super.update(elapsed);
+
+		watcherPatience--;
 	}
 }
