@@ -26,6 +26,7 @@ class PlayState extends FlxState
 	{
 		super.create();
 
+		block = Save.data.BLOCK;
 		add(blockBackdrop = new SolaceGridBackdrop(0, 0, 'assets/blocks/$block.png', Math.floor(FlxG.width / 16) + 1, Math.floor(FlxG.height / 16) + 1));
 		blockBackdrop.screenCenter();
 
@@ -61,7 +62,7 @@ class PlayState extends FlxState
 
 	function onToolClick()
 	{
-		block = FlxG.random.bool() ? 'dirt' : 'stone';
+		Save.data.BLOCK = block = FlxG.random.bool() ? 'dirt' : 'stone';
 		blockBackdrop.sprite.loadGraphic('assets/blocks/$block.png');
 	}
 

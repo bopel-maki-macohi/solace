@@ -18,10 +18,12 @@ class Save
 		data = FlxG.save.data.game;
 
 		data ??= {
-			MONEY: null
+			MONEY: null,
+			BLOCK: null,
 		};
 
 		data.MONEY ??= 0.0;
+		data.BLOCK ??= 'dirt';
 
 		save();
 	}
