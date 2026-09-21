@@ -20,11 +20,13 @@ class PlayState extends FlxState
 
 	var cashmonee:FlxText;
 
+	var block:String = 'dirt';
+
 	override function create()
 	{
 		super.create();
 
-		add(blockBackdrop = new SolaceGridBackdrop(0, 0, 'assets/blocks/dirt.png', Math.floor(FlxG.width / 16) + 1, Math.floor(FlxG.height / 16) + 1));
+		add(blockBackdrop = new SolaceGridBackdrop(0, 0, 'assets/blocks/$block.png', Math.floor(FlxG.width / 16) + 1, Math.floor(FlxG.height / 16) + 1));
 		blockBackdrop.screenCenter();
 
 		add(pickaxde = new SolaceSprite('assets/tools/pickaxe.png').setInteractable());
@@ -47,12 +49,20 @@ class PlayState extends FlxState
 
 	function onPickClick()
 	{
-		SaveFlags.MONEY.value += 2 / 10;
+		SaveFlags.MONEY.value += (block == 'dirt') ? 1 / 10 : 2 / 10;
+		onToolClick();
 	}
 
 	function onShovelClick()
 	{
-		SaveFlags.MONEY.value += 1 / 10;
+		SaveFlags.MONEY.value += (block == 'dirt') ? 2 / 10 : 1 / 10;
+		onToolClick();
+	}
+
+	function onToolClick()
+	{
+		block = FlxG.random.bool() ? 'dirt' : 'stone';
+		blockBackdrop.sprite.loadGraphic('assets/blocks/$block.png');
 	}
 
 	override function update(elapsed:Float)
