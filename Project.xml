@@ -7,10 +7,12 @@
 
 	<icon path="icon.png" />
 
+	<set name="TITLE_SUFFIX" value="Early Alpha" />
+
 	<!-- _________________________ Application Settings _________________________ -->
 
-	<app version="0.1.0" />
-	<app title="solace" file="solace" main="solace.Main" />
+	<app version="0.2.0" />
+	<app title="Solace ${TITLE_SUFFIX}" file="solace" main="solace.Main" />
 	<app package="com.maverick.solace" company="Maverick" />
 
 	<app preloader="flixel.system.FlxPreloader" />
