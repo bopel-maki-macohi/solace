@@ -9,7 +9,7 @@
 
 	<!-- _________________________ Application Settings _________________________ -->
 
-	<app version="0.0.1" />
+	<app version="0.1.0" />
 	<app title="solace" file="solace" main="solace.Main" />
 	<app packageName="com.maverick.solace" company="Maverick" />
 
