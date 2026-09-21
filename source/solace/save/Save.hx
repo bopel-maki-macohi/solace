@@ -11,6 +11,11 @@ class Save
 		FlxG.save.bind('solace', '.Maverick');
 
 		load();
+
+		FlxG.stage.application.onExit.add(_ ->
+		{
+			flush();
+		});
 	}
 
 	public static function load()
