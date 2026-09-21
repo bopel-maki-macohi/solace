@@ -50,5 +50,6 @@ class PlayState extends FlxState
 		super.update(elapsed);
 
 		cashmonee.text = 'Money: ${SaveFlags.MONEY.value}';
+		cashmonee.screenCenter(X);
 	}
 }
