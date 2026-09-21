@@ -9,6 +9,8 @@
 
 	<set name="TITLE_SUFFIX" value="Early Alpha" />
 
+	<haxeflag name="--dce" value="full" />
+
 	<!-- _________________________ Application Settings _________________________ -->
 
 	<app version="0.2.0" />
