@@ -1,4 +1,4 @@
-package solace.flixel;
+package solace.sprites;
 
 import flixel.FlxG;
 import flixel.util.FlxSignal;

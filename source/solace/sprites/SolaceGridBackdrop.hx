@@ -1,4 +1,4 @@
-package solace.flixel;
+package solace.sprites;
 
 import flixel.util.FlxAxes;
 import flixel.system.FlxAssets.FlxGraphicAsset;

@@ -4,10 +4,10 @@ import flixel.graphics.tile.FlxDrawTrianglesItem.DrawData;
 import flixel.math.FlxPoint;
 import flixel.FlxG;
 import flixel.FlxStrip;
-import solace.flixel.SolaceGridBackdrop;
+import solace.sprites.SolaceGridBackdrop;
 import solace.save.Save;
 import flixel.text.FlxText;
-import solace.flixel.SolaceSprite;
+import solace.sprites.SolaceSprite;
 import flixel.FlxSprite;
 import flixel.FlxState;
 
